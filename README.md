@@ -48,8 +48,16 @@ To find the optimal values of `θ`, `M`, and `X` that minimize the **L1 distance
     *   `M` ∈ [–0.05, 0.05]
     *   `X` ∈ [0, 100]
 *   The optimizer iteratively refined these parameters until a solution that minimized the loss was found.
+### Step 5: Sample Calculation for One Point
 
-### Step 5: Evaluation
+To validate the formula, the first data point from the CSV file was compared with the model’s predicted output.
+The L1 difference was calculated using
+L1 = |x_actual – x_pred| + |y_actual – y_pred|.
+For the first point:
+(88.3645, 57.7844) → (59.6701, 45.8043) gives
+L1 = 40.6745, which confirms that the calculation matches the implemented objective function.
+
+### Step 6: Evaluation
 *   After optimization, the loss for the first data point was computed to verify the calculation.
 *   The total L1 loss and the average difference per point were calculated to measure the overall goodness of fit for the model.
 
