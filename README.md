@@ -50,12 +50,145 @@ To find the optimal values of `θ`, `M`, and `X` that minimize the **L1 distance
 *   The optimizer iteratively refined these parameters until a solution that minimized the loss was found.
 ### Step 5: Sample Calculation for One Point
 
-To validate the formula, the first data point from the CSV file was compared with the model’s predicted output.
-The L1 difference was calculated using
-L1 = |x_actual – x_pred| + |y_actual – y_pred|.
+To validate the formula, one sample point from the dataset was used to manually verify the model’s computation.
+The L1 loss (sum of absolute differences) was calculated as:
+
+𝐿
+1
+=
+∣
+𝑥
+𝑎
+𝑐
+𝑡
+𝑢
+𝑎
+𝑙
+−
+𝑥
+𝑝
+𝑟
+𝑒
+𝑑
+∣
++
+∣
+𝑦
+𝑎
+𝑐
+𝑡
+𝑢
+𝑎
+𝑙
+−
+𝑦
+𝑝
+𝑟
+𝑒
+𝑑
+∣
+L1=∣x
+actual
+	​
+
+−x
+pred
+	​
+
+∣+∣y
+actual
+	​
+
+−y
+pred
+	​
+
+∣
+
 For the first point:
-(88.3645, 57.7844) → (59.6701, 45.8043) gives
-L1 = 40.6745, which confirms that the calculation matches the implemented objective function.
+
+(
+𝑥
+𝑎
+𝑐
+𝑡
+𝑢
+𝑎
+𝑙
+,
+𝑦
+𝑎
+𝑐
+𝑡
+𝑢
+𝑎
+𝑙
+)
+=
+(
+88.3645
+,
+57.7844
+)
+(x
+actual
+	​
+
+,y
+actual
+	​
+
+)=(88.3645,57.7844)
+(
+𝑥
+𝑝
+𝑟
+𝑒
+𝑑
+,
+𝑦
+𝑝
+𝑟
+𝑒
+𝑑
+)
+=
+(
+59.6701
+,
+45.8043
+)
+(x
+pred
+	​
+
+,y
+pred
+	​
+
+)=(59.6701,45.8043)
+
+Hence,
+
+𝐿
+1
+=
+∣
+88.3645
+−
+59.6701
+∣
++
+∣
+57.7844
+−
+45.8043
+∣
+=
+40.6745
+L1=∣88.3645−59.6701∣+∣57.7844−45.8043∣=40.6745
+
+This confirms that the computed loss aligns correctly with the implemented objective function.
 
 ### Step 6: Evaluation
 *   After optimization, the loss for the first data point was computed to verify the calculation.
