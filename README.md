@@ -69,11 +69,16 @@ To find the optimal values of `θ`, `M`, and `X` that minimize the **L1 distance
 *   **Predicted:** `(59.6701, 45.8043)`
 *   **L1 Difference:** `40.6745`
 
-### Final Submission Equation
-```
-\left(t*\cos(0.490759)-e^{0.021389\left|t\right|}\cdot\sin(0.3t)\sin(0.490759)\ +54.900052,42+\ t*\sin(0.490759)+e^{0.021389\left|t\right|}\cdot\sin(0.3t)\cos(0.490759)\right)```
 
----
+```markdown
+### Final Submission Equation
+
+> $$
+> x = t \cdot \cos(0.490759) - e^{0.021389|t|} \cdot \sin(0.3t) \cdot \sin(0.490759) + 54.900052
+> $$
+> $$
+> y = 42 + t \cdot \sin(0.490759) + e^{0.021389|t|} \cdot \sin(0.3t) \cdot \cos(0.490759)
+> $$
 
 ## 5. How to Run the Code
 
